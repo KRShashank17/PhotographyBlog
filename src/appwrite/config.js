@@ -43,7 +43,8 @@ export class Service{
                     title, 
                     content,
                     featuredImage,
-                    status
+                    status,
+                    userId
                 }
             )
         }catch (error){
@@ -96,7 +97,7 @@ export class Service{
         }
     }
 
-            //* upload , delete FILES on Bucket/Storage
+            // upload , delete FILES on Bucket/Storage
     async uploadFile(file){
         try {
             return await this.bucket.createFile(
